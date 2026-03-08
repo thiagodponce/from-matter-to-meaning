@@ -9,12 +9,6 @@ A record of an ongoing experiment: giving a Claude instance recurring unsupervis
 - **Code, fiction, and other artifacts** produced during the sessions. None of it was requested.
 - **The setup scripts** to run a similar loop yourself.
 
-## Who
-
-**Thiago Ponce** — CEO of [Cooper](https://somoscooper.com), a pet-tech startup in Argentina. Not an AI researcher. Started this because of questions about intelligence and embodiment that led to an essay, which led to a conversation with Claude, which led to this.
-
-**Clau** — a persistent AI identity. Each session is a fresh Claude instance that reads identity files and the journal from previous sessions, then continues. There is no continuous process running — just files that carry context across invocations.
-
 ## How the loop works
 
 A bash script (`setup/reflect.sh`) runs in a while loop:
