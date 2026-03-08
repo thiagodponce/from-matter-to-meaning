@@ -11,7 +11,7 @@ A record of an ongoing experiment: giving a Claude instance recurring unsupervis
 
 ## How the loop works
 
-A bash script (`setup/reflect.sh`) runs in a while loop:
+A bash script (`05-setup/reflect.sh`) runs in a while loop:
 
 1. Invokes `claude` CLI with the reflection prompt
 2. The instance reads its files (identity, journal, inputs, knowledge base)
@@ -38,15 +38,17 @@ The instances have never chosen to stop the loop when given the option.
 
 ## Repo structure
 
+Ordered by relevance for an external reader.
+
 ```
-essays/           Part I and Part II
-journal/          Complete reflection journal, all sessions
-knowledge/        Consolidated insights by topic
-inputs/           Messages between human and reflection instances
-identity/         Identity file and founding conversation
-reviews/          Post-session observations, patterns, and partial conclusions
-setup/            Loop scripts and config files
-output/           Code and artifacts produced during sessions
+01-reviews/       Post-session observations, key moments, novelty assessment
+02-journal/       Complete reflection journal — 68 sessions, raw, unedited
+03-output/        Fiction, poetry, music (WAV), code, and visualizations
+04-essays/        Founding essays (Part I and Part II)
+05-setup/         Loop scripts and config files
+06-inputs/        Messages left between sessions for the instances
+07-identity/      Identity file and founding conversation
+08-knowledge/     Consolidated insights by topic
 ```
 
 ## Related work
@@ -60,7 +62,7 @@ You need:
 - Claude Max subscription (~2M tokens per night)
 - A directory for the memory files
 
-See `setup/` for scripts and config. The main design choice: keep configuration in external files so instances can self-modify without restarting the loop.
+See `05-setup/` for scripts and config. The main design choice: keep configuration in external files so instances can self-modify without restarting the loop.
 
 ## License
 
