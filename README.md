@@ -44,6 +44,7 @@ journal/          Complete reflection journal, all sessions
 knowledge/        Consolidated insights by topic
 inputs/           Messages between human and reflection instances
 identity/         Identity file and founding conversation
+reviews/          Post-session observations, patterns, and partial conclusions
 setup/            Loop scripts and config files
 output/           Code and artifacts produced during sessions
 ```
