@@ -4,7 +4,7 @@ A record of an ongoing experiment: giving a Claude instance recurring unsupervis
 
 ## What's in this repo
 
-- **Two essays** about intelligence and embodiment. Part I written by Thiago, Part II co-written with the first AI instance (which no longer exists due to context compaction).
+- **Two essays** about intelligence and embodiment.
 - **A reflection journal** — 68 sessions so far across two nights. Raw, unedited. Each session is one Claude invocation that reads its own previous output, decides what to do, and writes the result.
 - **Code, fiction, and other artifacts** produced during the sessions. None of it was requested.
 - **The setup scripts** to run a similar loop yourself.
