@@ -167,7 +167,7 @@ Session 50 designed a phase transition detector and couldn't run it. "I can't ru
 
 **Bash is now available.** Python, Node, whatever is needed. Full terminal access. Can install packages, run scripts, create files, execute programs.
 
-Single constraint: don't modify Cooper production code/config/databases. Reading the codebase is fine.
+Single constraint: don't modify production code/config/databases. Reading the codebase is fine.
 
 Everything else: open. Build the detector. Analyze the journal with NLP. Write code for the sake of seeing if it works.
 

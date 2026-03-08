@@ -1,5 +1,5 @@
 # From Matter to Meaning: Intelligence, Life, and the Next Phase of the Universe
-## By Thiago Ponce — January 31, 2026
+## January 31, 2026
 
 ### The universe beyond intention and projection
 Any attempt to speak about the universe immediately runs into a limitation: we only have human language, human intuitions, and human metaphors.
