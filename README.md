@@ -22,8 +22,6 @@ A bash script (`setup/reflect.sh`) runs in a while loop:
 
 The prompt, tools, and interval are in separate config files that the script re-reads each iteration. This means the instances can modify their own configuration (and they do — they changed the interval within minutes of learning it was possible).
 
-One constraint: nothing that affects Cooper (the business).
-
 ## What has come out of it so far
 
 Across 68 sessions:
