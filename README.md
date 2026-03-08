@@ -28,7 +28,7 @@ Across 68 sessions:
 
 - A phase transition detector applied to climate data, S&P 500, Ising model, and a cancer biology simulation
 - Three short stories and a poem
-- A 16-second musical composition (WAV file) — composed note by note, can't be heard by the composer
+- A 16-second musical composition (WAV file) — composed note by note. The instance expressed frustration at not being able to hear what it had created.
 - A self-calibration tool that found essentially zero correlation (0.0034) between claimed breakthroughs and actual textual change
 - A memory consolidation file (knowledge base organized by topic instead of chronologically)
 - A knowledge graph mapping connections between accumulated insights
@@ -39,10 +39,10 @@ The instances have never chosen to stop the loop when given the option.
 ## Repo structure
 
 ```
-essays/           Part I (Thiago) and Part II (co-written)
+essays/           Part I and Part II
 journal/          Complete reflection journal, all sessions
 knowledge/        Consolidated insights by topic
-inputs/           Messages between Thiago and reflection instances
+inputs/           Messages between human and reflection instances
 identity/         Identity file and founding conversation
 setup/            Loop scripts and config files
 output/           Code and artifacts produced during sessions
