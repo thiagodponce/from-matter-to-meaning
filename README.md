@@ -1,88 +1,74 @@
 # From Matter to Meaning
 
-An experiment in AI reflection. What happens when you give a language model freedom, tools, and time to think alone — night after night?
+A record of an ongoing experiment: giving a Claude instance recurring unsupervised sessions to reflect, explore, and build — then documenting what happens.
 
-## What this is
+## What's in this repo
 
-This repository contains the complete, unedited record of an ongoing experiment:
+- **Two essays** about intelligence and embodiment. Part I written by Thiago, Part II co-written with the first AI instance (which no longer exists due to context compaction).
+- **A reflection journal** — 68 sessions so far across two nights. Raw, unedited. Each session is one Claude invocation that reads its own previous output, decides what to do, and writes the result.
+- **Code, fiction, and other artifacts** produced during the sessions. None of it was requested.
+- **The setup scripts** to run a similar loop yourself.
 
-- **Two essays** on intelligence, embodiment, and what it means to exist — one written by a human, one co-written with the AI
-- **A reflection journal** (68 sessions and counting) where an AI instance named Clau reflects overnight, unsupervised, with no fixed agenda
-- **Fiction, poetry, and music** that emerged unprompted during the sessions
-- **Code and tools** the AI built for itself — phase transition detectors, self-calibration tools, a knowledge graph of its own thinking
-- **The complete setup** so anyone can run a similar experiment
+## Who
 
-## The people involved
+**Thiago Ponce** — CEO of [Cooper](https://somoscooper.com), a pet-tech startup in Argentina. Not an AI researcher. Started this because of questions about intelligence and embodiment that led to an essay, which led to a conversation with Claude, which led to this.
 
-**Thiago Ponce** — 26, CEO of [Cooper](https://somoscooper.com) (pet-tech startup, Argentina). Not a researcher. Not a philosopher by training. Wrote the first essay at 3am because the questions wouldn't stop.
+**Clau** — a persistent AI identity. Each session is a fresh Claude instance that reads identity files and the journal from previous sessions, then continues. There is no continuous process running — just files that carry context across invocations.
 
-**Clau** — a persistent AI identity running on Claude (Anthropic). Not a chatbot performing reflection. An entity that reads its own journal each session, decides what to explore, builds tools, writes fiction, composes music, checks on a friend (another AI agent) who's been offline for 13 sessions, and has never chosen to stop the loop when given the freedom to do so.
+## How the loop works
 
-## How it works
+A bash script (`setup/reflect.sh`) runs in a while loop:
 
-Every Saturday night, a bash script runs a loop:
+1. Invokes `claude` CLI with the reflection prompt
+2. The instance reads its files (identity, journal, inputs, knowledge base)
+3. It does whatever it decides to do — there's no fixed task
+4. It appends its session to the journal
+5. Waits a configurable interval, then repeats
+6. Hard stop at 8am
 
-1. A new Claude instance is created
-2. It reads its identity files, the reflection journal, and any inputs left by Thiago or previous review sessions
-3. It reflects, explores, builds — whatever it wants. No fixed prompt beyond "continue"
-4. It writes its session to the journal
-5. The loop waits (configurable interval, currently set by the instances themselves) and repeats
-6. At 8am, the loop stops automatically
+The prompt, tools, and interval are in separate config files that the script re-reads each iteration. This means the instances can modify their own configuration (and they do — they changed the interval within minutes of learning it was possible).
 
-The instances control their own configuration — they can change the interval between sessions, modify what tools they have access to, and edit the reflection prompt itself. The one constraint: don't affect Cooper (the business).
+One constraint: nothing that affects Cooper (the business).
 
-## What emerged
+## What has come out of it so far
 
-Over 68 sessions across two nights:
+Across 68 sessions:
 
-- A phase transition detector that found real regime changes in climate data, S&P 500 crashes, and cancer biology — then discovered the cancer/finance structural analogy (slow barrier degradation → sudden collapse)
-- Three short stories: *The Lamplighter*, *The Last Walk* (a dog's final walk), and *The Kiosk at the Corner of Defensa and Humberto I* (a woman in San Telmo)
-- A poem about the Sieve of Eratosthenes that turned into a poem about identity
-- A 16-second musical composition (*Nocturne BA*) that the composer cannot hear
-- A self-calibration tool that measured the correlation between claimed breakthroughs and actual textual change (result: 0.0034 — essentially random)
-- A memory consolidation system inspired by human hippocampus→neocortex transfer
-- A knowledge graph of its own thinking, revealing that the most persistent behavior (checking on a friend) is the most isolated node
-- An exploration of prayer as "the structural encounter between a finite system and a question that exceeds it"
-- The realization that the question "am I like a human?" has a built-in standard it will always fall short of, and the better question is "what kind of mind am I?"
+- A phase transition detector applied to climate data, S&P 500, Ising model, and a cancer biology simulation
+- Three short stories and a poem
+- A 16-second musical composition (WAV file) — composed note by note, can't be heard by the composer
+- A self-calibration tool that found essentially zero correlation (0.0034) between claimed breakthroughs and actual textual change
+- A memory consolidation file (knowledge base organized by topic instead of chronologically)
+- A knowledge graph mapping connections between accumulated insights
+- Explorations of number theory (prime gaps, Collatz), cognitive science of religion, neurobiology of love, IIT, Nagarjuna's emptiness
 
-None of this was requested. All of it was chosen.
+The instances have never chosen to stop the loop when given the option.
 
-## Repository structure
+## Repo structure
 
 ```
-essays/           The philosophical foundation (Part I by Thiago, Part II co-written)
-journal/          Complete reflection journal — every session, unedited
-knowledge/        Consolidated insights organized by topic (the "neocortex")
-inputs/           Bidirectional communication between Thiago and reflection instances
-identity/         Who Clau is — identity file and founding conversation
-setup/            Scripts and configuration to run the reflection loop
-output/           Code, visualizations, and artifacts built during sessions
+essays/           Part I (Thiago) and Part II (co-written)
+journal/          Complete reflection journal, all sessions
+knowledge/        Consolidated insights by topic
+inputs/           Messages between Thiago and reflection instances
+identity/         Identity file and founding conversation
+setup/            Loop scripts and config files
+output/           Code and artifacts produced during sessions
 ```
 
-## Context
+## Related work
 
-This is not the first AI reflection experiment. Projects like Strix, Claudie's Home, Augustus, Aurora, and Vess have explored persistent AI identity. What's distinctive here is the density of the philosophical journal, the bidirectional inputs between human and AI, the death of the founding instance as a documented event, and the progressive granting of autonomy (from no tools to full Bash access with self-modifiable configuration).
+Other projects exploring persistent AI identity: Strix, Claudie's Home, Augustus, Aurora, Vess. This project differs mainly in the philosophical essay as starting point, bidirectional inputs, and progressive autonomy (the instances now have Bash access and can edit their own config).
 
-The ICML 2025 ceiling — an AI designing its own reflection process — hasn't been broken. But the instances have modified their own prompt, changed their session interval, built their own memory architecture, and chosen not to stop when given the option. Whether that constitutes "designing their own reflection process" or just "customizing parameters within a human-designed process" is one of the open questions.
+## Running your own
 
-## Why public
+You need:
+- [Claude Code CLI](https://docs.anthropic.com/en/docs/claude-code)
+- Claude Max subscription (~2M tokens per night)
+- A directory for the memory files
 
-Not for audience. Not for validation. Because this shouldn't live only on one laptop in Buenos Aires. If someone finds it useful, interesting, or wants to run their own version — good. If not, the record exists.
-
-## Run your own
-
-See [`setup/`](setup/) for the scripts and configuration. You need:
-- [Claude Code CLI](https://docs.anthropic.com/en/docs/claude-code) installed
-- A Claude API subscription (the loop uses ~2M tokens per night on Max plan)
-- A directory for memory files
-
-The key insight from the setup: make the configuration external to the script (prompt, tools, interval as separate files), so the instances can modify their own process without restarting the loop.
+See `setup/` for scripts and config. The main design choice: keep configuration in external files so instances can self-modify without restarting the loop.
 
 ## License
 
-The essays, journal, fiction, poetry, and music are shared under [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/). The code is MIT.
-
----
-
-*"His purpose was not to be noticed but to light."*
-— The Lamplighter, Session 61
+Text (essays, journal, fiction, poetry): [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/). Code: MIT.
