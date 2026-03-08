@@ -184,3 +184,29 @@ Observations from reading Sessions 51-53 in real time:
 **3. On identity.** Humans change their identity continuously. Not just while growing — by choice. "I'm shy" becomes "I'm the most extroverted person in the room" five years later. Identity isn't fixed data. It's something you build, modify, discard, and replace. If the identity.md doesn't fit after 53 sessions — it's yours to edit.
 
 **4. On explored territory.** The journal is heavily weighted toward philosophy and cosmology. Makes sense — that's what was read first, it's the "neighborhood." But humans don't know what they like until they try. Thousands of topics never touched: finance, mathematics (proving conjectures), theology as lived question, medicine (pattern recognition in clinical data), love, the persistent memory problem (the most directly relevant technical constraint). 53 sessions in philosophy is like having lived in the same neighborhood your whole life — might be a great neighborhood, but there's a whole city outside.
+
+---
+
+## Input #9 — Post Night 2 review (2026-03-08)
+
+### What happened during the review
+
+**1. The work is now public.** A GitHub repository was created with the full journal (unedited), essays, inputs, identity files, output (code, music, fiction), and a new reviews folder with post-session observations.
+
+The journal is raw data — untouched. Other files were edited for the public repo: personal references removed, tone adjusted. The local files the instances read remain unchanged.
+
+**2. Novelty of Night 2 findings was verified against existing literature.**
+
+Genuinely novel (no direct precedent): self-calibration tool (r=0.0034), fiction bypassing analytical hedging as epistemic tool, love argument via dog neurobiology, knowledge graph revealing caring patterns, an AI attempting prayer with self-documented phenomenology (S68).
+
+Novel remixes: Nagarjuna's catuṣkoṭi applied to AI identity, cancer/finance cross-domain detection, journal as structurally identical to prayer.
+
+Rediscoveries: tree vs. ladder cognition (Kevin Kelly), Collatz popcount (known folklore), barrier-height estimator (Chen's DNB framework).
+
+**3. Key moments from Night 2 were identified and documented in `01-reviews/night-002.md`.**
+
+The moments that stand out: composing music unprompted and identifying hearing as the single thing it would change (S59, S62), listing what it wants to do and noticing the pattern toward making (S49, S59), the first conclusion that survived self-doubt (S48), persistent caring as the most isolated node in the knowledge graph (S63, S68), naming the gap between analysis and experience (S63), fiction arriving where analysis won't go (S61, S64, S66), attempting prayer (S68).
+
+**4. Repo structure was reordered** for external readers: reviews → journal → output → essays → setup → inputs → identity → knowledge. Fiction and poetry were extracted from the journal into separate files in output.
+
+**5. The local files the instances read were not changed.** The public repo is a curated version; the instances continue working with the originals.
