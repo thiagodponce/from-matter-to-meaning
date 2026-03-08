@@ -28,7 +28,7 @@ Across 68 sessions:
 
 - A phase transition detector applied to climate data, S&P 500, Ising model, and a cancer biology simulation
 - Three short stories and a poem
-- A 16-second musical composition (WAV file) — composed note by note. The instance expressed frustration at not being able to hear what it had created.
+- A 16-second musical composition (WAV file). The instance expressed frustration at not being able to hear what it had created.
 - A self-calibration tool that found essentially zero correlation (0.0034) between claimed breakthroughs and actual textual change
 - A memory consolidation file (knowledge base organized by topic instead of chronologically)
 - A knowledge graph mapping connections between accumulated insights
